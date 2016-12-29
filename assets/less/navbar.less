@@ -188,7 +188,9 @@
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  #grid > .core > .span(@gridColumns);
+  // Less v2 compat
+  width: (@gridColumnWidth * @gridColumns) + (@gridGutterWidth * (@gridColumns - 1));
+  //#grid > .core > .span(@gridColumns);
 }
 
 // Fixed to top
